@@ -7,6 +7,8 @@ public interface MotorIO {
     public static class MotorIOInputs {
         public double appliedVoltage = 0;
         public double currentAmps = 0;
+
+        public double rotations = 0;
     }
 
     /** Set the voltage of the motor */

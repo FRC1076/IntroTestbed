@@ -7,6 +7,7 @@ package frc.robot;
 import frc.robot.Constants.OIConstants;
 import frc.robot.Constants.SystemConstants;
 import frc.robot.Constants.SystemConstants.RobotMode;
+import frc.robot.commands.AutonCommandBuilder;
 import frc.robot.subsystems.motor.MotorIODisabled;
 import frc.robot.subsystems.motor.MotorIONeo;
 import frc.robot.subsystems.motor.MotorSubsystem;
@@ -62,8 +63,10 @@ public class RobotContainer {
      * @return the command to run in autonomous
      */
     public Command getAutonomousCommand() {
+        AutonCommandBuilder commandBuilder = new AutonCommandBuilder(m_motor);
+
         // An example command will be run in autonomous
-        return null;
+        return commandBuilder.getAutonCommand();
     }
 
     public static Command threadCommand() {
