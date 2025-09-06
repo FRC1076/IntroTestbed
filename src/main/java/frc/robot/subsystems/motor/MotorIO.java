@@ -5,8 +5,8 @@ import org.littletonrobotics.junction.AutoLog;
 public interface MotorIO {
     @AutoLog
     public static class MotorIOInputs {
-        public static double appliedVoltage = 0;
-        public static double currentAmps = 0;
+        public double appliedVoltage = 0;
+        public double currentAmps = 0;
     }
 
     /** Set the voltage of the motor */
