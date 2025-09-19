@@ -23,6 +23,19 @@ public class AutonCommandBuilder {
 
     /** NEW MEMBERS: INSIDE run() IS WHERE YOU WRITE YOUR CODE */
     public void run() {
+        /*
+         * Commands:
+         * setVoltage(voltage) - Sets the voltage the motor runs at until stopped
+         * waitSeconds(seconds) - Waits for the specified number of seconds
+         * waitUntil(() -> condition) - Waits until the condition inside is true (see options below)
+         * 
+         * Conditions:
+         * rotationsTraveledEquals(count) - True if the rotations traveled by the motor equals count
+         * rotationsTraveledGreaterThan(count) - True if the rotations traveled by the motor is more than count
+         * rotationsTraveledLessThan(count) - True if the rotations traveled by the motor is less than count 
+         * 
+         * HINT: Rotations traveled goes backward if voltage is negative.
+         */
 
         setVoltage(2);
         waitSeconds(1);
