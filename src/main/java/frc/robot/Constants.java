@@ -34,5 +34,7 @@ public final class Constants {
         public static final boolean kInverted = false;
         public static final IdleMode kIdleMode = IdleMode.kBrake;
         public static final int kCurrentLimitAmps = 40;
+
+        public static final double kFreeSpeedRPM = 5676.0;
     }
 }

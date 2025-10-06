@@ -31,7 +31,7 @@ public class MotorSubsystem extends SubsystemBase {
 
     /** Returns a command that runs the motor at the desired speed */
     public Command runVolts(double volts) {
-        return Commands.run(
+        return Commands.runOnce(
             () -> setVoltage(volts),
             this
         );
