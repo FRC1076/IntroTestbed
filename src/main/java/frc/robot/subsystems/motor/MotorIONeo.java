@@ -1,9 +1,9 @@
 package frc.robot.subsystems.motor;
 
+import com.revrobotics.PersistMode;
 import com.revrobotics.RelativeEncoder;
+import com.revrobotics.ResetMode;
 import com.revrobotics.spark.SparkMax;
-import com.revrobotics.spark.SparkBase.PersistMode;
-import com.revrobotics.spark.SparkBase.ResetMode;
 import com.revrobotics.spark.SparkLowLevel.MotorType;
 import com.revrobotics.spark.config.SparkMaxConfig;
 
@@ -39,5 +39,6 @@ public class MotorIONeo implements MotorIO {
         inputs.appliedVoltage = m_motor.getAppliedOutput() * m_motor.getBusVoltage();
         inputs.currentAmps = m_motor.getOutputCurrent();
         inputs.rotations = m_encoder.getPosition();
+        inputs.velocityRPM = m_encoder.getVelocity();
     }
 }

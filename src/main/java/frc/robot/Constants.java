@@ -36,5 +36,7 @@ public final class Constants {
         public static final int kCurrentLimitAmps = 40;
 
         public static final double kFreeSpeedRPM = 5676.0;
+
+        public static final double kMaxOperatorControlVolts = 4;
     }
 }

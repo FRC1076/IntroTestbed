@@ -9,6 +9,7 @@ public interface MotorIO {
         public double currentAmps = 0;
 
         public double rotations = 0;
+        public double velocityRPM = 0;
     }
 
     /** Set the voltage of the motor */

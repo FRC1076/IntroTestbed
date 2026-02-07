@@ -54,7 +54,10 @@ public class RobotContainer {
      * joysticks}.
      */
     private void configureBindings() {
-        
+        m_controller.leftActive()
+            .whileTrue(
+                m_motor.runVolts(() -> -m_controller.getLeftY())
+            );
     }
 
     /**

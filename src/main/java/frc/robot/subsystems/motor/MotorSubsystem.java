@@ -1,5 +1,7 @@
 package frc.robot.subsystems.motor;
 
+import java.util.function.DoubleSupplier;
+
 import org.littletonrobotics.junction.Logger;
 
 import edu.wpi.first.wpilibj2.command.Command;
@@ -30,9 +32,17 @@ public class MotorSubsystem extends SubsystemBase {
     }
 
     /** Returns a command that runs the motor at the desired speed */
-    public Command runVolts(double volts) {
+    public Command applyVoltage(double volts) {
         return Commands.runOnce(
             () -> setVoltage(volts),
+            this
+        );
+    }
+
+    /** Returns a command that runs the motor at the supplied speed */
+    public Command runVolts(DoubleSupplier volts) {
+        return Commands.run(
+            () -> setVoltage(volts.getAsDouble()),
             this
         );
     }

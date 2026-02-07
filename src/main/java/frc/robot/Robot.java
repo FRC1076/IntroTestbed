@@ -42,7 +42,7 @@ public class Robot extends LoggedRobot {
         SignalLogger.enableAutoLogging(false);
 
         // This raises thread priority after a delay of 20 seconds
-        RobotContainer.threadCommand().schedule();
+        CommandScheduler.getInstance().schedule(RobotContainer.threadCommand());
     }
 
     /**
@@ -75,7 +75,7 @@ public class Robot extends LoggedRobot {
 
         // schedule the autonomous command (example)
         if (m_autonomousCommand != null) {
-            m_autonomousCommand.schedule();
+            CommandScheduler.getInstance().schedule(m_autonomousCommand);
         }
     }
 

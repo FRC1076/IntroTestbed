@@ -77,7 +77,7 @@ public class AutonCommandBuilder {
 
     // Commands
     private void setVoltage(double volts) {
-        commands.add(m_motor.runVolts(volts));
+        commands.add(m_motor.applyVoltage(volts));
     }
 
     /** For people who want to do special things */
